@@ -10,6 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var legendaResultado: UILabel!
+    
+    @IBAction func gerarNumero(_ sender: Any) {
+        let number = arc4random_uniform(11)
+        
+        if(number == 0){
+            legendaResultado.text = String(1)
+        }else {
+            legendaResultado.text = String(number)
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
